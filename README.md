@@ -1,4 +1,1 @@
-Kitten
-======
-
-A simple compiler for a Java-like object-oriented language
+Elaborato kitten VR367825
