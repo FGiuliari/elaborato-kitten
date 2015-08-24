@@ -1,0 +1,4 @@
+digraph "MyFibonacci.FIXTURE6(MyFibonacci)void" {
+size = "11,7.5";
+codeblock_13 [ shape = box, label = "block 13\nload 0 of type MyFibonacci\nconst 20\nputfield MyFibonacci.n:int\nreturn void"];
+}

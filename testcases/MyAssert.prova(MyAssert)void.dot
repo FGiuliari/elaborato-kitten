@@ -1,0 +1,10 @@
+digraph "MyAssert.prova(MyAssert)void" {
+size = "11,7.5";
+codeblock_13 [ shape = box, label = "block 13\nnewstring ciccio\\n\ncall String.output()void [String.output()void]\nnewstring ciccio\nstore 1 of type String\nnewstring ciccio\nload 1 of type String\ncall String.equals(String)boolean [String.equals(String)boolean]"];
+codeblock_12 [ shape = box, label = "block 12\nif_false\nnewstring 36.3\nreturn String"];
+codeblock_13->codeblock_12 [color = blue label = "" fontsize = 8]
+codeblock_14 [ shape = box, label = "block 14\nif_true"];
+codeblock_11 [ shape = box, label = "block 11\nnewstring wow\\n\ncall String.output()void [String.output()void]\nnewstring \nreturn String"];
+codeblock_14->codeblock_11 [color = blue label = "" fontsize = 8]
+codeblock_13->codeblock_14 [color = blue label = "" fontsize = 8]
+}

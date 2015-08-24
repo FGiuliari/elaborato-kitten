@@ -1,0 +1,10 @@
+digraph "MyFibonacci.primoTest(MyFibonacci)void" {
+size = "11,7.5";
+codeblock_10 [ shape = box, label = "block 10\nload 0 of type MyFibonacci\nload 0 of type MyFibonacci\ngetfield MyFibonacci.n:int\ncall MyFibonacci.fib(int)int [MyFibonacci.fib(int)int]\nconst 3"];
+codeblock_9 [ shape = box, label = "block 9\nif_cmpne int\nnewstring 26.18\nreturn String"];
+codeblock_10->codeblock_9 [color = blue label = "" fontsize = 8]
+codeblock_11 [ shape = box, label = "block 11\nif_cmpeq int"];
+codeblock_8 [ shape = box, label = "block 8\nnewstring \nreturn String"];
+codeblock_11->codeblock_8 [color = blue label = "" fontsize = 8]
+codeblock_10->codeblock_11 [color = blue label = "" fontsize = 8]
+}

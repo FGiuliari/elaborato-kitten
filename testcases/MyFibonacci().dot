@@ -1,0 +1,4 @@
+digraph "MyFibonacci()" {
+size = "11,7.5";
+codeblock_17 [ shape = box, label = "block 17\nload 0 of type MyFibonacci\ncall Object() [Object()]\nreturn void"];
+}

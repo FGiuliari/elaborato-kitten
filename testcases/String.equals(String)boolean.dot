@@ -1,0 +1,4 @@
+digraph "String.equals(String)boolean" {
+size = "11,7.5";
+codeblock_10 [ shape = box, label = "block 10\nconst false\nreturn boolean"];
+}
