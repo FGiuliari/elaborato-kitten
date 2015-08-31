@@ -111,14 +111,14 @@ public class TestClassGenerator extends JavaClassGenerator {
 			this.addConcatToVar(il,VAR_TOPRINT,"  - "+ts.getName()+": ");
 			//creo nuovo oggetto della classe che sto testando
 			//C obj=new C()
-			pushRunTimeString(il, ts.getName()+": \n");
-			il.append(this.getFactory().createInvoke("runTime.String", "output"
-					, Type.VOID, Type.NO_ARGS, Constants.INVOKEVIRTUAL));
+			
 			il.append(this.getFactory().createNew((ObjectType)clazz.toBCEL()));
 			il.append(InstructionFactory.DUP);
 			il.append(this.getFactory().createInvoke(clazz.getName(), "<init>"
 					, Type.VOID, Type.NO_ARGS, Constants.INVOKESPECIAL));
-			
+			pushRunTimeString(il, ts.getName()+": \n");
+			il.append(this.getFactory().createInvoke("runTime.String", "output"
+					, Type.VOID, Type.NO_ARGS, Constants.INVOKEVIRTUAL));
 			//per ogni fixture
 			for(FixtureSignature fs:clazz.fixturesLookup()){
 				//fixture(obj)

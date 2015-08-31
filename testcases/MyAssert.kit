@@ -1,6 +1,17 @@
 class MyAssert {
-	constructor() {}
+
+	field int number
 	
+	constructor() {
+	this.number :=0
+	}
+
+	method void setNumber(int n){
+		this.number:= n
+	}
+	method int getNumber(){
+		return this.number
+	}
 	method int fib(int n)
 		if (n = 0 | n = 1) then return 1
 		else return this.fib(n - 1) + this.fib(n - 2)
@@ -13,7 +24,7 @@ class MyAssert {
 	}
 	
 	fixture
-		"fixted13\n".output()
+		"fixted0\n".output()
 		
 	fixture
 		"fixted1\n".output()
@@ -21,8 +32,10 @@ class MyAssert {
 	fixture
 		"fixted2\n".output()
 		
-	fixture
-		"fixted3\n".output()
+	fixture{
+		"fixted3\n".output();
+		this.setNumber(5)
+		}
 	
 	fixture
 		"fixted4\n".output()
@@ -33,7 +46,6 @@ class MyAssert {
 	test prova{
 		"ciccio\n".output();
 		String s:="ciccio";
-		assert("ciccio".equals(s));
 		"wow\n".output()
 	}
 	
@@ -41,7 +53,17 @@ class MyAssert {
 		"ciccio\n".output();
 		String s:="ciccio";
 		this.fib(5);
-		assert("cicci".equals(s));
 		"wow\n".output()
 	}
+
+	test prova3{
+		assert(this.getNumber()=5)
+	}
+
+	test prova4{
+		assert(this.getNumber()=3)
+	}
+	
+
+
 }
